@@ -1,190 +1,168 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.navbar {
-    background: #131313;
-    height: 80px;
-    display: flex; 
-    justify-content: center;
-    font-size: 1.2rem;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
+nav {
+ background: #131313;
+ font-family: sans-serif;
+ padding: 5px 20px; 
 }
 
-.navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
-
+ul {
+  list-style-type: none;  /*takes out bullet points */
 }
 
-#navbar__logo {
-    background-color: #5eeb34;
-    background-image: linear-gradient(to top, #aafa20 0%, #5eeb34 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-
+a {
+  color: rgb(59, 240, 23);
+  text-decoration: none;  /* takes out undeline */ 
 }
 
-.fa-gem {
-    margin-right: .5rem;
+a:hover {
+  text-decoration: underline; /*when hovered over links, it will underline */
 }
 
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px; /*adding space between links */
 }
 
-.navbar__item {
-    height: 80px;
-}
- .navbar__links {
-     color: #fff;
-     display: flex;
-     align-items: center;   
-     justify-content: center;
-     text-decoration: none;
-     padding: 0 1rem;
-     height: 100%;
-
- }
-
- .navbar__btn {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 0 1rem;
-     width: 100%;
- }
-
- .button {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     text-decoration: none;
-     padding: 10px 20px;
-     height: 100%;
-     width: 100%;
-     border: none;
-     outline: none;
-     border-radius: 4px;
-     background: #f77062;
-     color: #fff;
+.menu li a {
+  display:block;  /*puts all of list items in block formation */
 }
 
-.button:hover {
-    background: #4837ff;
-    transition: all .3s ease;
+.logo a {
+  font-size: 1.5rem; /* changes font of logo */
 }
 
-.navbar__links:hover {
-    color: #f77062;
-    transition: all .3s ease;
+.button.secondary {
+  border-bottom: 1px #444 solid;
 }
 
-@media screen and (max-width: 960px) {
-    .navbar__container {
-      display: flex;
-      justify-content: space-between;
-      height: 80px;
-      z-index: 1;
-      width: 100%;
-      max-width: 1300px;
-      padding: 0;  
-    }
-
-    .navbar__menu {
-      display: grid;
-      grid-template-columns: auto;
-      margin: 0;
-      width: 100%;
-      position: absolute; 
-      /* top: -1000px; 
-      opacity: 0; */
-      transition: all .5s ease;
-      height: 50vh;
-      z-index: -1;
-      background: #131313;
-
-    }
-
-    .navbar__menu.active {
-        background: #131313;
-        top: 100%;
-        opacity: 1;
-        transition: all .5s ease;
-        z-index: 99;
-        height: 50vh;
-        font-size: 1.6rem;
-
-    }
-
-    #navbar__logo {
-        padding-left: 25px;
-    }
-
-    .navbar__toggle .bar {
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all .3s ease-in-out;
-        background: #fff;
-    }
-
-    .navbar__item {
-        width: 100%;
-    }
-
-    .navbar__links {
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
-    }
-
-    #mobile-menu {
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        transform: translate(5%, 20%);
-    }
-
-    .navbar__btn {
-        padding-bottom: 2rem;
-    }
-
-    .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        height: 80px;
-        margin: 0;
-    }
-
-    .navbar__toggle .bar {
-        display: block;
-        cursor: pointer;
-    }
+/*mobile menu */
+.menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /*justify content adjust items going left to right */
+  align-items: center;    /* align items adjust items up and down */
 }
+
+.toggle {
+  order: 1;
+}
+
+.item.button {
+  order: 2;
+}
+
+.item {
+  width: 100%;
+  text-align: center;
+  order: 3;
+  display: none;
+}
+
+.item.active {
+  display: block;
+}
+
+
+
+
+.toggle {
+  cursor: pointer;
+}
+
+.bars {                         /*creates middle bar for hamburger */
+  background: #999;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  width: 18px;
+}
+
+.bars::before, .bars::after { /*creates top and bottom bars for hamburger */
+  background: #999;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: absolute;
+  width: 18px;
+}
+
+.bars::before {    /*moves top and bottom hanguger bars */
+  top: 5px;
+}
+
+.bars::after {
+  top: -5px;
+}
+
+/*tablet menu */
+@media only screen and (min-width: 600px) {
+  .menu {
+      justify-content: center;
+  }
+  .logo {
+      flex: 1;
+  }
+  .item.button {              /*shows login and signup button */
+      width: auto;
+      order: 1;
+      display: block;    
+  }
+  .toggle {
+      order: 2;
+  }
+  .button.secondary {
+      border: 0;
+  }
+  .button a {              /*decorate buttons */
+      text-decoration: none;
+      padding: 7px 15px;
+      background: yellow;
+      border: 1px solid #fff;
+      border-radius: 50em;
+  }
+  .button.secondary a{       /*leaves signup button transparent*/
+      background: transparent;
+  }
+  .button a:hover {           /*hover animation over login and sign up */
+      transition: all .25s;
+  }
+  .button:not(.secondary) a:hover {      /*details for hover animation */
+      background: #006d6d;
+      border-color: #005959;
+  }
+  .button.secondary a:hover {
+      color: rgb(151, 7, 7)
+  }
+
+}
+/*desktop */
+@media only screen and (min-width: 1000px) {
+  .item {
+      display: block;    /*has links show back up becasue hidden in mobile */
+      width: auto;    /*gives them a relavtive width and aligns them up on tha navbar instead of taking up a whole line themselves*/
+  }
+  .toggle {
+      display: none;
+  }
+  .logo {
+      order: 0;
+  }
+  .item {
+      order: 1;
+  }
+  .button {
+      order: 2;
+  }
+  .menu li {
+      padding: 15px 10px;
+  }
+  .menu li.button {
+      padding-right: 0;
+  }
+}
+

@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High Five</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Navbar Template</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  <!--jquery for hamburger--> 
+    <!--javascript for hamburger-->
+    <script>
+        $(function() {                                           
+            $(".toggle").on("click", function(){
+                
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");
+                }
+                else{
+                    $(".item").addClass("active");
+                }
+            })
+        });
+    </script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="/" id="navbar__logo">High Five</a>
-            <div class="navbar_toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links"> Home </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/tech.html" class="navbar__links"> Tech </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links"> Products </a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="/" class="button"> Sign Up </a>
-                </li>
-            </ul>
-        </div>
+    <nav>
+        <ul class='menu'>
+            <li class='logo'><a href="#">High Five Installations</a></li>
+            <li class='item'><a href="#">Home</a></li>
+            <li class='item'><a href="#">About</a></li>
+            <li class='item'><a href="#">Services</a></li>
+            <li class='item button'><a href="#">Login</a></li>
+            <li class='item button secondary'><a href="#">Sign Up</a></li>
+            <li class='toggle'><span class='bars'></span></li>
+        </ul>    
     </nav>
+    <main>
+        <a href="#" style="position:fixed;bottom: 0;">https://youtube.com</a>
+    </main>
 </body>
 </html>
