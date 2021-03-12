@@ -8,6 +8,8 @@ nav {
  background: #131313;
  font-family: sans-serif;
  padding: 5px 20px; 
+ position: sticky;                                  /*keeps navbar stuck to top */
+ top: 0;                                            /*have to have top bottom left right where to stick*/
 }
 
 ul {
@@ -15,7 +17,7 @@ ul {
 }
 
 a {
-  color: rgb(59, 240, 23);
+  color: #fff;
   text-decoration: none;  /* takes out undeline */ 
 }
 
@@ -33,7 +35,9 @@ a:hover {
 }
 
 .logo a {
-  font-size: 1.5rem; /* changes font of logo */
+  font-size: 1.5rem;
+  color: rgb(59, 240, 23); /* changes font of logo */
+  text-decoration: none;
 }
 
 .button.secondary {
@@ -121,8 +125,8 @@ a:hover {
   .button a {              /*decorate buttons */
       text-decoration: none;
       padding: 7px 15px;
-      background: yellow;
-      border: 1px solid #fff;
+      background: transparent;
+      border: 1px solid #312f2fec;
       border-radius: 50em;
   }
   .button.secondary a{       /*leaves signup button transparent*/
@@ -132,11 +136,14 @@ a:hover {
       transition: all .25s;
   }
   .button:not(.secondary) a:hover {      /*details for hover animation */
-      background: #006d6d;
-      border-color: #005959;
+      background: rgb(59, 240, 23);
+      border-color: rgb(59, 240, 23);
+      color: #131313;
   }
   .button.secondary a:hover {
-      color: rgb(151, 7, 7)
+      background: rgb(59, 240, 23);
+      border-color: rgb(59, 240, 23);  
+      color: #131313;
   }
 
 }
@@ -166,3 +173,127 @@ a:hover {
   }
 }
 
+/* main section */
+
+.main {
+  background-color: #312f2fec;     /*main background color*/
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;        /*divide grid in half*/
+  align-items: center;                   /*align items in grid sections in center*/
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;                      /*90% of viewport*/
+  z-index: 1;                       /*one step to the forefront*/
+  width: 100%;
+  max-width: 1300px;                  /*didnt want to take up whole page*/
+  padding: 0 50px;
+}
+
+.main__content h1 {
+  font-size: 4rem;
+  background-color: rgb(59, 240, 23); 
+  background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);
+  background-size: 100%;
+  /* color: rgb(59, 240, 23)  */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+  font-size: 4rem;
+  background-color: rgb(59, 240, 23); 
+  background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);   /*adds linear gradient to background*/
+  background-size: 100%;                                                                      /*100% makes sure all test will be covered*/
+  background-clip: text;                                                                    /*will only render backgorund where text is*/
+  -webkit-background-clip: text;          
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;                                                      /*will make gradient visible*/                    
+  -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main__button {
+  font-size: 1rem;
+  background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50em;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all .25s;
+}
+ 
+.main__button a {                         /*z index is to keep text visible through hover*/
+  position: relative;
+  z-index: 2;
+  color: fff;
+  text-decoration: none;
+}
+
+.main__button:after {                        /*what button will look like after hover effect*/
+  position: absolute;
+  content: '';                                /*content empty so only color changes*/
+  top:0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #312f2fec;
+  transition: all .25s;
+  border-radius: 50em;
+}
+
+
+.main__button:hover:after {                      /*to hover to the after effect*/
+  width: 100%;
+}
+
+.img__container {
+  text-align: center;
+}
+
+#main__img {
+  width: 80%;
+  height: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__container {
+    display: grid;
+    grid-template-columns: auto;        
+    align-items: center;                   
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    width: 100%;                   
+ }
+
+ .main__content {
+   text-align: center;
+   margin-bottom: 4rem;
+ }
+
+ .main__content h1 {
+   font-size: 2.5rem;
+   margin-top: 2rem;
+ }
+
+ .main__content h2 {
+   font-size: 2rem;
+ }
+
+ .main__content p {
+   font-size: 1.5rem;
+ }
+}
