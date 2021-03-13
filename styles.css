@@ -10,6 +10,7 @@ nav {
  padding: 5px 20px; 
  position: sticky;                                  /*keeps navbar stuck to top */
  top: 0;                                            /*have to have top bottom left right where to stick*/
+ z-index: 3;
 }
 
 ul {
@@ -296,4 +297,121 @@ a:hover {
  .main__content p {
    font-size: 1.5rem;
  }
+}
+
+/*main2*/
+.main2  {
+  background-color: #312f2fec;     /*main background color*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.main2 h1 {
+  background-color: rgb(59, 240, 23); 
+  background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);   /*adds linear gradient to background*/
+  background-size: 100%;                                                                      /*100% makes sure all test will be covered*/
+  background-clip: text;                                                                    /*will only render backgorund where text is*/
+  -webkit-background-clip: text;          
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;                                                      /*will make gradient visible*/                    
+  -moz-text-fill-color: transparent;
+}
+
+.main2__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main__card {                                                          /*add images*/
+  margin: 1rem;
+  height: 525px;
+  width: 400px; 
+  border-radius: 4px;
+  background-image: url('/images/datanetworkcabling.png');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.main__card:nth-child(2) {
+  background-image: url(/images/monitoredSecurity.jpg);
+  
+}
+
+.main__card:nth-child(3) {
+  background-image: url(/images/accessControl.jpg);
+}
+
+.main__card:nth-child(4) {
+  background-image: url(/images/videoSurveillance.png);
+}
+
+.main__card:nth-child(5) {
+  background-image: url(/images/audioVideo.jpg);
+}
+
+.main__card:nth-child(6) {
+  background-image: url(/images/smartBuilding.jpg);
+}
+
+.main2 h2 {                                                /*adjust text in pictures*/
+  position: absolute;
+  top: 350px;
+  left: 30px;
+}
+
+.main2 p {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+}
+
+/*add media queries to adjust picture size*
+
+/*footer*/
+
+.footer__container {
+  background-color: #312f2fec;
+  padding: 5rem 0;  
+  display: flex;
+  flex-direction: column;                                          /*puts items in colums ad center of page*/
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  height: 2.5rem;
+  width: 100%;
+  
+        
+}
+
+.footer__links {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__linkWrap {
+  display: flex;
+
+}
+
+.footer__linkItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+  text-align: left;
+  width: 160px;
+  box-sizing: border-box;
+
+}
+
+.footer__linkItems h2 {
+  margin-bottom: 16px;
+  color: #fff;
 }
