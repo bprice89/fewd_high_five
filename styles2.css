@@ -20,6 +20,7 @@
 }
 
 .services h1 {
+    font-size: 4rem;
     background-color: rgb(59, 240, 23); 
     background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);   /*adds linear gradient to background*/
     background-size: 100%;                                                                      /*100% makes sure all test will be covered*/
@@ -39,30 +40,38 @@
 
 .service_card {                                                         
     margin: 1rem;
-    height: 525px;
+    height: 550px;
     width: 300px; 
     border-radius: 4px;
     background-size: cover;
     position: relative;
     color: #fff;
-    border: rgb(59, 240, 23) dotted;
+    /* border: rgb(59, 240, 23) dotted; */
     text-align: center;
   }
 
   .service_card img {
       height: 250px;
       width: 295px;
+      border: 1px #fff ridge;
   }
 
   .service_card h2 {
       color: rgb(59, 240, 23);
+      margin: 10px;
+  }
+
+  .service_card p {
+      margin: 5px;
+      line-height: 150%;
+      font-family: sans-serif;
   }
 
   .service_card button {
       text-decoration: none;
       cursor: pointer;
       padding: 7px 10px;
-      background: transparent;
+      background: #131313;
       border: 1px solid #312f2fec;
       border-radius: 50em;
       margin-top: 20px;
@@ -79,41 +88,61 @@
       color: #131313;
   }
 
-  
-
-  .service_card:nth-child(4) img {
-      height: 100px;
+  .service_card:nth-child(4) {
+      height: 600px;
   }
   
- /* .main__card:nth-child(2) {
-    background-image: url(/images/monitoredSecurity.jpg);
+  .service_card:nth-child(4) img {
+      height: 200px;
+  }
+  
+  .service_card:nth-child(5) {
+      height: 500px;
     
   }
   
-  .main__card:nth-child(3) {
-    background-image: url(/images/accessControl.jpg);
+ 
+
+  @media only screen and (min-width: 700px) {
+      .service_card {
+          height: 600px;
+      }
+
+      .service_card:nth-child(5) {
+        height: 600px;
+      
+    }
+
+    .service_card button {
+        position: absolute;
+        right: 50px;
+        top: 530px;
+    }
+    
   }
-  
-  .main__card:nth-child(4) {
-    background-image: url(/images/videoSurveillance.png);
+
+  @media only screen and (min-width: 1100px) {
+      .services h1 {
+          margin-bottom: 50px;
+          margin-top: 50px;
+          font-size: 5rem;
+      }
+    
+      .service_card {
+          width: 500px;
+      }
+
+      .service_card img {
+        height: 250px;
+        width: 350px;
+    }
+
+      .service_card p {
+          font-size: 1.25rem;
+      }
+
+      .service_card h2 {
+        color: rgb(59, 240, 23);
+        margin: 10px;
+    }
   }
-  
-  .main__card:nth-child(5) {
-    background-image: url(/images/audioVideo.jpg);
-  }
-  
-  .main__card:nth-child(6) {
-    background-image: url(/images/smartBuilding.jpg);
-  }
-  
-  .main2 h2 {                                               
-    position: absolute;
-    top: 350px;
-    left: 30px;
-  }
-  
-  .main2 button {
-    position: absolute;
-    top: 400px;
-    left: 30px;
-  } */
