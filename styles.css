@@ -299,77 +299,7 @@ a:hover {
  }
 }
 
-/*main2*/
-.main2  {
-  background-color: #312f2fec;     /*main background color*/
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-}
 
-.main2 h1 {
-  background-color: rgb(59, 240, 23); 
-  background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);   /*adds linear gradient to background*/
-  background-size: 100%;                                                                      /*100% makes sure all test will be covered*/
-  background-clip: text;                                                                    /*will only render backgorund where text is*/
-  -webkit-background-clip: text;          
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;                                                      /*will make gradient visible*/                    
-  -moz-text-fill-color: transparent;
-}
-
-.main2__container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.main__card {                                                          /*add images*/
-  margin: 1rem;
-  height: 525px;
-  width: 400px; 
-  border-radius: 4px;
-  background-image: url('/images/datanetworkcabling.png');
-  background-size: cover;
-  position: relative;
-  color: #fff;
-}
-
-.main__card:nth-child(2) {
-  background-image: url(/images/monitoredSecurity.jpg);
-  
-}
-
-.main__card:nth-child(3) {
-  background-image: url(/images/accessControl.jpg);
-}
-
-.main__card:nth-child(4) {
-  background-image: url(/images/videoSurveillance.png);
-}
-
-.main__card:nth-child(5) {
-  background-image: url(/images/audioVideo.jpg);
-}
-
-.main__card:nth-child(6) {
-  background-image: url(/images/smartBuilding.jpg);
-}
-
-.main2 h2 {                                                /*adjust text in pictures*/
-  position: absolute;
-  top: 350px;
-  left: 30px;
-}
-
-.main2 p {
-  position: absolute;
-  top: 400px;
-  left: 30px;
-}
-
-/*add media queries to adjust picture size*
 
 /*footer*/
 
@@ -384,8 +314,8 @@ a:hover {
   bottom: 0;
   height: 2.5rem;
   width: 100%;
-  
-        
+   
+       
 }
 
 .footer__links {

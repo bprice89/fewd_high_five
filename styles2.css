@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+.main_services {
+    background-color: #312f2fec;
+}
+
+/* main */
+
+.services {
+    background-color: #312f2fec; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.services h1 {
+    background-color: rgb(59, 240, 23); 
+    background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);   /*adds linear gradient to background*/
+    background-size: 100%;                                                                      /*100% makes sure all test will be covered*/
+    background-clip: text;                                                                    /*will only render backgorund where text is*/
+    -webkit-background-clip: text;          
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;                                                      /*will make gradient visible*/                    
+    -moz-text-fill-color: transparent;
+}
+
+.services_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.service_card {                                                         
+    margin: 1rem;
+    height: 525px;
+    width: 300px; 
+    border-radius: 4px;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    border: rgb(59, 240, 23) dotted;
+    text-align: center;
+  }
+
+  .service_card img {
+      height: 250px;
+      width: 295px;
+  }
+
+  .service_card h2 {
+      color: rgb(59, 240, 23);
+  }
+
+  .service_card button {
+      text-decoration: none;
+      cursor: pointer;
+      padding: 7px 10px;
+      background: transparent;
+      border: 1px solid #312f2fec;
+      border-radius: 50em;
+      margin-top: 20px;
+  }
+
+  .service_card button a:hover {
+      transition: all .25s;
+      
+  }
+
+  .service_card button a:hover {
+      background: rgb(59, 240, 23);
+      border-color: rgb(59, 240, 23);
+      color: #131313;
+  }
+
+  
+
+  .service_card:nth-child(4) img {
+      height: 100px;
+  }
+  
+ /* .main__card:nth-child(2) {
+    background-image: url(/images/monitoredSecurity.jpg);
+    
+  }
+  
+  .main__card:nth-child(3) {
+    background-image: url(/images/accessControl.jpg);
+  }
+  
+  .main__card:nth-child(4) {
+    background-image: url(/images/videoSurveillance.png);
+  }
+  
+  .main__card:nth-child(5) {
+    background-image: url(/images/audioVideo.jpg);
+  }
+  
+  .main__card:nth-child(6) {
+    background-image: url(/images/smartBuilding.jpg);
+  }
+  
+  .main2 h2 {                                               
+    position: absolute;
+    top: 350px;
+    left: 30px;
+  }
+  
+  .main2 button {
+    position: absolute;
+    top: 400px;
+    left: 30px;
+  } */

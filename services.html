@@ -4,9 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Services</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  <!--jquery for hamburger--> 
+    <!--javascript for hamburger-->
+    <script>
+        $(function() {                                           
+            $(".toggle").on("click", function(){
+                
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");
+                }
+                else{
+                    $(".item").addClass("active");
+                }
+            })
+        });
+    </script>
 </head>
 <body>
-    <h1>The services Page</h1>
+    
+    <nav>
+        <ul class='menu'>
+            <li class='logo'><a href="index.html">High Five Installations</a></li>
+            <li class='item'><a href="index.html">Home</a></li>
+            <li class='item'><a href="#">About</a></li>
+            <li class='item button'><a href="#">Login</a></li>
+            <li class='item button secondary'><a href="#">Sign Up</a></li>
+            <li class='toggle'><span class='bars'></span></li>
+        </ul>    
+    </nav>
+    
+
+    
+
+        <!--main-->
+            <div class="services">
+                <h1>Our Services</h1>
+                <div class="services_container">
+                    <div class="service_card">
+                        <img src="/images/monitoredSecurity.jpg" alt="">
+                        <h2>Monitored Security</h2>
+                        <p>Our security systems can be designed to fit your work environment and budget. They can be customized to give you access to your system through any mobile device or computer. You can arm, disarm, and view real time video with the swipe of your finger.</p>
+                        <button><a href='#'>Get a Free Consultation</a></button>
+                    </div>
+                    <div class="service_card">
+                        <img src="/images/datanetworkcabling.png" alt="">
+                        <h2>Data & Network Cabling</h2>
+                        <p>An effective data and network cabling system is the foundation of your business. We provide the highest quality cable, laid neatly and properly from point A to point B. We will ensure your communications infrastructure works flawlessly so you can do what you do best.</p>
+                        <button><a href='#'>Get a Free Consultation</a></button>
+                    </div>
+                    <div class="service_card">
+                        <img src="/images/accessControl.jpg" alt="">
+                        <h2>Access Control</h2>
+                        <p>Keep your business or home safe and key-less through our access control systems. Safeguard and shield by preventing unauthorized access to highly secure areas. Our logging technology tracks when someone is entering or leaving your building at all times.</p>
+                        <button><a href='#'>Get a Free Consultation</a></button>
+                    </div>
+                    <div class="service_card">
+                        <img src="/images/videoSurveillance.png" alt="">
+                        <h2>Video Surveillance</h2>
+                        <p>Video surveillance is the best way to reduce your losses and protect your assets. We offer a wide variety of video surveillance products and options to help prevent break ins. At Louisville Low Voltage, we install equipment with the latest technology that is easy to use so that our clients can protect their business without the hassle of a complicated system. We offer free consultations, call or email us today to schedule an appointment. </p>
+                        <button><a href='#'>Get a Free Consultation</a></button>
+                    </div>
+                    <div class="service_card">
+                        <img src="/images/audioVideo.jpg" alt="">
+                        <h2>Audio/Video</h2>
+                        <p>Our solutions include audio, video, teleconferencing, lighting control, sound masking and digital signage. We create a comfortable, cutting edge meeting space that produces a seamless multimedia experience.</p>
+                        <button><a href='#'>Get a Free Consultation</a></button>
+                    </div>
+                    <div class="service_card">
+                        <img src="/images/smartBuilding.jpg" alt="">
+                        <h2>Smart Building</h2>
+                        <p>Think SMART HOME! Think SMART BUILDING! Access your thermostat, security system, lighting, sound and more from any mobile device or computer. Keep your business energy efficient and secure while traveling or staying home.</p>
+                        <button><a href='#'>Get a Free Consultation</a></button>
+                    </div> 
+                </div>    
+            </div>
+        </div>       
+    
+    
 </body>
 </html>
