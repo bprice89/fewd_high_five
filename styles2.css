@@ -71,10 +71,15 @@
       text-decoration: none;
       cursor: pointer;
       padding: 7px 10px;
-      background: #131313;
+      background: rgb(59, 240, 23);
       border: 1px solid #312f2fec;
       border-radius: 50em;
       margin-top: 20px;
+      
+  }
+
+  .service_card button a { 
+    color: #131313;
   }
 
   .service_card button a:hover {
@@ -83,9 +88,7 @@
   }
 
   .service_card button a:hover {
-      background: rgb(59, 240, 23);
-      border-color: rgb(59, 240, 23);
-      color: #131313;
+      color: #fff;
   }
 
   .service_card:nth-child(4) {

@@ -186,7 +186,7 @@ a:hover {
   align-items: center;                   /*align items in grid sections in center*/
   justify-self: center;
   margin: 0 auto;
-  height: 90vh;                      /*90% of viewport*/
+  height: 100vh;                      /*90% of viewport*/
   z-index: 1;                       /*one step to the forefront*/
   width: 100%;
   max-width: 1300px;                  /*didnt want to take up whole page*/
@@ -232,16 +232,17 @@ a:hover {
   border-radius: 50em;
   margin-top: 2rem;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   transition: all .25s;
+  color: #fff;
 }
  
-.main__button a {                         /*z index is to keep text visible through hover*/
+/* .main__button a {                         
   position: relative;
   z-index: 2;
   color: fff;
   text-decoration: none;
-}
+} */
 
 .main__button:after {                        /*what button will look like after hover effect*/
   position: absolute;
@@ -253,6 +254,7 @@ a:hover {
   background: #312f2fec;
   transition: all .25s;
   border-radius: 50em;
+  color: #fff;
 }
 
 
@@ -276,13 +278,15 @@ a:hover {
     align-items: center;                   
     justify-self: center;
     margin: 0 auto;
-    height: 90vh;
-    width: 100%;                   
+    height: 100vh;
+    width: 100%;
+                      
  }
 
  .main__content {
    text-align: center;
    margin-bottom: 4rem;
+    
  }
 
  .main__content h1 {
@@ -297,51 +301,119 @@ a:hover {
  .main__content p {
    font-size: 1.5rem;
  }
+
+ .main__button {
+   right: 135px;
+ }
 }
 
 
 
-/*footer*/
+/* submit form */
 
-.footer__container {
-  background-color: #312f2fec;
-  padding: 5rem 0;  
-  display: flex;
-  flex-direction: column;                                          /*puts items in colums ad center of page*/
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  height: 2.5rem;
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);       /*moved to midde of page*/
+
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+.container {
+  display: none;
+  background: #fff;
+  width: 410px;
+  padding: 30px;
+  border: 3px #131313 ridge;
+}
+
+#show:checked ~ .container {
+  display: block;
+}
+
+.container .far {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.container .text {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* .container form {
+  margin-top: -20px;
+} */
+
+.container form .data {
+  height: 45px;
   width: 100%;
-   
-       
+  margin: 40px 0;
 }
 
-.footer__links {
+form .data label {
+  font-size: 1rem;
+}
+
+.container .data input {
+  height: 100%;
   width: 100%;
-  max-width: 1000px;
-  display: flex;
-  justify-content: center;
-}
-
-.footer__linkWrap {
-  display: flex;
+  font-size: 1rem;
+  padding-left: 10px;
 
 }
 
-.footer__linkItems {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 16px;
-  text-align: left;
-  width: 160px;
-  box-sizing: border-box;
+form .forgot-pass {
+  margin-top: -10px;
+}
+
+form .forgot-pass a {
+  color: #0f0be6;
+  text-decoration: none;
+  
+}
+
+form .forgot-pass a:hover {
+  text-decoration: underline;
+}
+
+form .submit-button {
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+}
+
+
+form .submit-button button {
+  height: 100%;
+  width: 100%;
+  color: #131313;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
 
 }
 
-.footer__linkItems h2 {
-  margin-bottom: 16px;
-  color: #fff;
+form .signup-link  {
+  text-align: center;
+}
+
+form .signup-link a {                    /*why wont work????*/
+  color: #0f0be6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form .signup-link a:hover {
+  text-decoration: underline;
 }

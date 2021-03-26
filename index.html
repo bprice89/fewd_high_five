@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/51a27e18c3.js" crossorigin="anonymous"></script>
     <title>High Five Installations</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  <!--jquery for hamburger--> 
@@ -37,6 +38,7 @@
         </ul>    
     </nav>
     
+    
     <!--main-->
     <div class="main">
         <div class="main__container">
@@ -44,33 +46,33 @@
                 <h1>HIGH FIVE</h1>
                 <h2>INSTALLATIONS</h2>
                 <p>When Quality Matters</p>
-                <button class="main__button"><a href="#">Get a free Consultation</a></button>
+                <div class="center">
+                    <input type="checkbox" id="show">
+                    <label for="show" class="main__button">Get Started</label>
+                    <div class="container">
+                        <label for="show" class="far fa-window-close"></label>
+                       <div class="text">Login Form</div>
+                       <form action="#">
+                           <div class="data">
+                              <label>Email or Phone</label>
+                              <input type="text" required> 
+                           </div>
+                           <div class="data">
+                            <label>Password</label>
+                            <input type="password" required> 
+                         </div>
+                         <div class="forgot-pass"><a href="#">Forgot Password</a></div>
+                         <div class="submit-button">
+                             <button type="submit">login</button>
+                         </div>
+                         <div class="signup-link">Not a Member? <a href="#">Sign Up Here</a></div>
+                       </form> 
+                    </div>
+                </div>
             </div>
             <div class="img__container">
                 <img src="images/greenhighfive.png" alt="main logo" id="main__img">
             </div>
-        </div>
-    </div>
-
-    <!--footer-->
-    <div class="footer__container">
-        <div class="footer__links">
-            <div class="footer__linkWrap">
-                <div class="footer__linkItems">
-                    <h2>About US</h2>
-                    <a href="#">Our Company</a>
-                    <a href="#">Our Suppliers</a>
-                    <a href="#">Services</a>
-                </div>
-            </div>
-            <div class="footer__linkWrap">
-                <div class="footer__linkItems">
-                    <h2>Contact US</h2>
-                    <a href="#">Schedule a Service</a>
-                    <a href="#">Support</a>
-                    <a href="#">Careers</a>  
-                </div>
-            </div>        
         </div>
     </div>
 </body>
