@@ -186,7 +186,7 @@ a:hover {
   align-items: center;                   /*align items in grid sections in center*/
   justify-self: center;
   margin: 0 auto;
-  height: 100vh;                      /*90% of viewport*/
+  height: 100vh;                      /*height of viewport*/
   z-index: 1;                       /*one step to the forefront*/
   width: 100%;
   max-width: 1300px;                  /*didnt want to take up whole page*/
@@ -198,7 +198,6 @@ a:hover {
   background-color: rgb(59, 240, 23); 
   background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);
   background-size: 100%;
-  /* color: rgb(59, 240, 23)  */
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -237,12 +236,7 @@ a:hover {
   color: #fff;
 }
  
-/* .main__button a {                         
-  position: relative;
-  z-index: 2;
-  color: fff;
-  text-decoration: none;
-} */
+
 
 .main__button:after {                        /*what button will look like after hover effect*/
   position: absolute;
@@ -349,9 +343,6 @@ input[type="checkbox"]{
   text-align: center;
 }
 
-/* .container form {
-  margin-top: -20px;
-} */
 
 .container form .data {
   height: 45px;
@@ -408,7 +399,7 @@ form .signup-link  {
   text-align: center;
 }
 
-form .signup-link a {                    /*why wont work????*/
+form .signup-link a {                    
   color: #0f0be6;
   text-decoration: none;
   cursor: pointer;
