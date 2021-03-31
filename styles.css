@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;  
   padding: 0;
   margin: 0;
 }
@@ -182,19 +182,25 @@ a:hover {
 
 .main__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;        /*divide grid in half*/
+  grid-template-columns: auto;        /*divide grid in half*/
   align-items: center;                   /*align items in grid sections in center*/
   justify-self: center;
   margin: 0 auto;
   height: 100vh;                      /*height of viewport*/
   z-index: 1;                       /*one step to the forefront*/
   width: 100%;
-  max-width: 1300px;                  /*didnt want to take up whole page*/
-  padding: 0 50px;
+  
+}
+
+.main__content {
+   text-align: center;
+   margin-bottom: 4rem;
+
 }
 
 .main__content h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;            /*x*/
+  margin-top: 2rem;             /*x*/
   background-color: rgb(59, 240, 23); 
   background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);
   background-size: 100%;
@@ -206,7 +212,7 @@ a:hover {
 }
 
 .main__content h2 {
-  font-size: 4rem;
+  font-size: 2rem;                /*x*/
   background-color: rgb(59, 240, 23); 
   background-image: linear-gradient(to top, rgb(88, 168, 41) 0%, rgb(59, 240, 23) 100%);   /*adds linear gradient to background*/
   background-size: 100%;                                                                      /*100% makes sure all test will be covered*/
@@ -219,7 +225,7 @@ a:hover {
 
 .main__content p {
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;     /*x*/
   font-weight: 700;
 }
 
@@ -236,7 +242,9 @@ a:hover {
   color: #fff;
 }
  
-
+/* .main__button {
+  right: 135px;
+} */
 
 .main__button:after {                        /*what button will look like after hover effect*/
   position: absolute;
@@ -265,15 +273,17 @@ a:hover {
   height: 80%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   .main__container {
     display: grid;
-    grid-template-columns: auto;        
+    grid-template-columns: 1fr 1fr;    /*x*/    
     align-items: center;                   
     justify-self: center;
     margin: 0 auto;
     height: 100vh;
     width: 100%;
+    max-width: 1300px;            /*x*/
+    padding: 0 50px;                /*x*/
                       
  }
 
@@ -284,20 +294,20 @@ a:hover {
  }
 
  .main__content h1 {
-   font-size: 2.5rem;
+   font-size: 4rem;             /*x*/
    margin-top: 2rem;
  }
 
  .main__content h2 {
-   font-size: 2rem;
+   font-size: 4rem;
  }
 
  .main__content p {
-   font-size: 1.5rem;
+   font-size: 2rem;
  }
 
  .main__button {
-   right: 135px;
+   position: absolute;
  }
 }
 
@@ -408,3 +418,5 @@ form .signup-link a {
 form .signup-link a:hover {
   text-decoration: underline;
 }
+
+/*change*/

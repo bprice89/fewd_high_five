@@ -1,5 +1,5 @@
 # fewd_high_five
-CLIFF NOTES
+CLIFF NOTES--
 -Webpage is built with a mobile first approach and is fully responsive.
  
 GITHUB COMMITS
