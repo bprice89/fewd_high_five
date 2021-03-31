@@ -104,8 +104,9 @@
   }
   
  
-
+/* tablet */
   @media only screen and (min-width: 700px) {
+     
       .service_card {
           height: 600px;
       }
@@ -115,7 +116,7 @@
       
     }
 
-    .service_card button {
+      .service_card button {
         position: absolute;
         right: 50px;
         top: 530px;
@@ -123,8 +124,14 @@
     
   }
 
+  /* desktop */
   @media only screen and (min-width: 1100px) {
-      .services h1 {
+    .services_cotainer {  
+        display: flex;
+        flex-direction: row;
+   }  
+    
+    .services h1 {
           margin-bottom: 50px;
           margin-top: 50px;
           font-size: 5rem;
